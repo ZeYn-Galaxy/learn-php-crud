@@ -5,14 +5,14 @@ include '../title.php' ?>
 
 <body>
     <?php
-    include '../Module/connect-data.php';
+    include './connect-data.php';
 
-    $sql = "DELETE FROM user WHERE id = $_GET[id]";
+    $sql = "INSERT INTO user (id, Nama_Siswa, NISN, Tanggal_Lahir, Alamat) VALUES (NULL, '$_POST[nama]', '$_POST[nisn]', '$_POST[lahir]', '$_POST[alamat]')";
 
     if (mysqli_query($conn, $sql)) {
         echo <<< end
-        <div class="alert alert-danger" role="alert">
-        Sukses Hapus Data!
+        <div class="alert alert-primary" role="alert">
+        Sukses Input Data!
         <a href='../user-table.php' class="btn btn-primary">Table Data</a>
         </div>
         end;

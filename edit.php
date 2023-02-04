@@ -8,12 +8,12 @@ include 'title.php' ?>
     <?php include 'navbar.php' ?>
     <div class="container-fluid">
         <?php
-        include "./Module/connect-data.php";
+        include "./Operasi/connect-data.php";
         $sql = "SELECT * FROM user WHERE id = $_GET[id]";
         $results = $conn->query($sql);
         while ($row = $results->fetch_assoc()) {
             echo <<< end
-                <form action="./Module/update.php?id=$_GET[id]" method="post">
+                <form action="./Operasi/update.php?id=$_GET[id]" method="post">
                 <div class="mb-3">
                 <label for="inputNama" class="form-label">Nama Siswa</label>
                 <input type="text" class="form-control" id="inputNama" name="nama" value="$row[Nama_Siswa]">
@@ -31,7 +31,7 @@ include 'title.php' ?>
                 <input type="text" class="form-control" id="inputAlamat" name="alamat" value="$row[Alamat]">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="./Module/delete.php?id=$_GET[id]" class="btn btn-danger">DELETE</a>
+                <a href="./Operasi/delete.php?id=$_GET[id]" class="btn btn-danger">DELETE</a>
                 </form>
                 end;
         }

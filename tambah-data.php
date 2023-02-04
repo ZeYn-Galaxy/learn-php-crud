@@ -7,7 +7,7 @@ include 'title.php' ?>
 <body>
     <?php include 'navbar.php' ?>
     <div class="container-fluid">
-        <form action="/Module/insert.php" method="post">
+        <form action="./Operasi/insert.php" method="post">
             <div class="mb-3">
                 <label for="inputNama" class="form-label">Nama Siswa</label>
                 <input type="text" class="form-control" id="inputNama" name="nama">

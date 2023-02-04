@@ -2,7 +2,7 @@
 <html lang="en">
 <?php $title = "CRUD";
 include 'title.php' ?>
-<?php include './Module/connect-data.php' ?>
+<?php include './Operasi/connect-data.php' ?>
 
 <body>
     <?php include 'navbar.php' ?>
